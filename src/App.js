@@ -1,31 +1,22 @@
 import './App.css';
 import Button from './Button.js'
 
-
-
-const estilo = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: '100vh',
-  fontSize: '5rem',
-  color: '#fff',
-  border: 'solid 1px red',
-  margin: 'auto',
-  padding: 'auto',
-  fontStyle: 'italic',
-  textShadow: '5px 5px 5px #c5c5c5',
-  backgroundColor: '#f5f5f5',
-
-}
-
-
+const arr = [
+  'Sergio feliz',
+  'Sergio emocionado',
+  'Sergio triste',
+]
 
 const App = () => {
-  const valor = 'triste'
+  const miVariable = false
+
+  if (miVariable) {
+    return <p>Mi variable dio true!</p>
+  }
   return (
     <div>
-      <h1  className="App-logo" style={estilo} situacion={'ambivalente'}>valor de {valor}</h1>
+      <h1 className="App-logo" onClick={(e) => console.log('click', e)}>Hola Mundo</h1>
+      {arr.map(el => <p className="lista" key={el}>{el}</p>)}
       <Button onClick={() => console.log('clickeado')}>
         Enviar
       </Button>

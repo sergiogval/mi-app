@@ -1,6 +1,8 @@
-const Button = () => {
+import './Button.css'
+
+const Button = (props) => {
   return(
-    <button className="btn">Enviar</button>
+    <button {...props} className="btn"/>
   )
 }
 

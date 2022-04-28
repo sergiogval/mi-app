@@ -3,13 +3,21 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vh;
   pointer-events: none;
+  text-align: center;
+}
+
+.lista {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
+  }
+  .lista {
+    animation: lista-move infinite 3s ease-in-out;
   }
 }
 
@@ -36,3 +44,19 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes lista-move {
+  0% {
+    font-size: 1em;
+    color: red;
+  }
+  50% {
+    font-size: 3em;
+    color: blue;
+  }
+  100% {
+    font-size: 1em;
+    color: red;
+  }
+}
+
